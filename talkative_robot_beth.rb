@@ -1,8 +1,7 @@
- ##Lab/Homework - Talkative Robot
-# ###Add on to previous lab with:
-# Group previously defined if/else and case statements into methods
-# Have at least one method that does not need a param
-# Have at least one method that requires a param
+ ##Lab/Homework - Talkative Robot with methods added
+ # not sure if I am on the right track; I understand that the get can be put into a method 
+ # not sure if I should be putting other things into a method.  Thanks
+
 
 puts "What is your name?"
 name = gets.chomp
