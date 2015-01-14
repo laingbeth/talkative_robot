@@ -2,9 +2,12 @@
  # not sure if I am on the right track; I understand that the get can be put into a method 
  # not sure if I should be putting other things into a method.  Thanks
 
+def get_name
+	puts "What is your name?"
+	return gets.chomp
+end
 
-puts "What is your name?"
-name = gets.chomp
+name = get_name
 
 #method 
 def get_age
