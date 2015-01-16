@@ -1,36 +1,12 @@
- ####  Lab 2
-require 'pry'
 
-user = { }
-
-def get_name
-	puts "What is your name?"
-	gets.chomp
-end
-
-# name = get_name
-user[:name] = get_name
-
-
-grocery_list = [ ]
-grocery_list = ['milk', 'eggs', 'bread', 'pizza', 'cheese', 'coffee', 'almonds']
-puts [grocery_list]
-grocery_item = grocery_list.sample
-puts "Hey #{user[:name]}, did you already grab the #{grocery_item}?"
-get_item = gets.chomp.capitalize
-if get_item == "Y" 
-	grocery_list.delete(grocery_item)
-else get_item == "N"
-	puts "remember the #{grocery_item}"
-end
-
-puts [grocery_list]
-puts "Oh yeah, don't forget the bread!"
-grocery_list.push(bread)
 # binding.pry
 #user[:name] = get_name
 
-def get_age
+def get_name(name)
+	puts "Hi, what is your name?"
+	gets.chomp.capitalize
+
+def get_age(age)
 	puts "How old are you?"
 	gets.chomp.to_i 
 end
@@ -39,14 +15,24 @@ user[:age] = get_age
 
 puts "Hi #{user[:name]}, who is #{user[:age]} years old!"
 
-def get_gender
+def get_gender(gender)
 	puts "what gender are you, M or F?"
 	gets.chomp.capitalize
 end
 #gender = get_gender
 user[:gender] = get_gender
 
+def get_city(city)
+	puts "What city do you live in?"
+	gets.chomp.capitalize
+
 puts "So, you're a #{user[:gender]}."
+
+user = [ ]
+user[:name] 	= get_name
+user[:city] 	= get_city
+user[:age] 		= get_age
+user[:gender] = get_gender
 
 if user[:gender] == "M"  
 	puts "Hi there, Champ" 
@@ -63,6 +49,8 @@ def olive_fav
 	gets.chomp
 end
 
+user[:fav_robot] 		= get_fav_robot
+user[:olive_fav] = get_olive_fav
 olive = olive_fav
 puts "I like black olives too" 				unless olive == "green" 
 puts "Ug, green olives are gross!" 			if olive == "green" 
