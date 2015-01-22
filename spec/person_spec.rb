@@ -21,11 +21,14 @@ describe Person do
 			let(:person) {Person.new(age: 75 == 75)}
 
 			it "is true" do
-				expect (person.age == 75).to be_truthy
+				expect (person.age == 75).to be_falsey
+				cle
 			end	
 		end	
 	end	
 end			
+
+
 
 describe Person do
 
