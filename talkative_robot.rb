@@ -1,34 +1,35 @@
-# file edits 15JAN2015
-
 	
+class Person
+
+	def initialize(args)
+		user[:name] 	= @name
+		user[:city] 	= @city
+		user[:age] 		= @age
+		user[:gender] = @gender
+	end
+end
+
+class User  
+	def initialize
+	end
+end
+
+class Author 
+	def initialize
+	end
+end
 
 	author = {name: "Fred", age: "25", city: "Hillsdale", gender: "M"}
 	user   = [ ]
-
-	people =[user, author]
-	
-	def get_name
-		puts "Hi there, what's your name?"
-		gets.chomp
-	end
-
-	def get_age
-		puts "How old are you?"
-		gets.chomp.to_i 
-	end
-
-	def get_city
-		puts "what city do you live in?" 
-		gets.chomp.capitalize
-	end
-
 user[:name] 	= get_name
 user[:city] 	= get_city
 user[:age] 		= get_age
 
-	def get_name	
-		puts "Hi there, what's your name?"
-		gets.chomp
+	people =[user, author]
+
+	def get_city
+		puts "what city do you live in?" 
+		gets.chomp.capitalize
 	end
 
 	def get_name(name)

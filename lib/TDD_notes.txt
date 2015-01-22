@@ -1,0 +1,7 @@
+
+what TDD does for you?
+- saves times
+- helps focus/direction
+- docmentation
+- experiment/learn
+- 'defensive coding' able to test code after changes to find problems quickly/easily
