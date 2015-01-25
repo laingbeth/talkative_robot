@@ -3,42 +3,70 @@ require_relative '../lib/person'
 
 describe Person do
 
-  describe "male?" do
+  describe "#male?" do
     context "is a guy" do
-      let(:person_m) { Person.new(gender: "M") }
-      
+      let(:guy) { Person.new(gender: "M") }
+   
       it "is true" do
-        expect( person_m.male? ).to be_truthy
+        expect( guy.male? ).to be_truthy
       end
+    end
+
+    context "is a gal" do
+    	# Similar to above
     end
   end
 
-end  
-describe Person do
+	describe "#old?" do
+		context "age over 75 old" do
+			let(:old_person) { Person.new(age: 85) }
 
-	describe "person age" do
-		context "person age is 75" do
-			let(:person) {Person.new(age: 75 == 75)}
+			it "is 85 old" do
+				expect( person.old? ).to be_truthy
+			end	
+		end
+
+		context "is 75" do
+			# repeat
+		end
+
+		context "under 75" do
+			# repeat
+		end
+	end			
+
+	describe "#young?" do
+		context "age under 75 old" do
+			let(:person) { Person.new(age: 32) }
 
 			it "is true" do
-				expect (person.age == 75).to be_truthy
+				expect(person.age ).to be < 75
 			end	
 		end	
 	end	
-end			
 
-describe Person do
+	describe "#grandmother?" do
+		context "old lady" do
+			let(:old_lady) { Person.new( gender: "F", age: 100) }
 
-	describe "person age under milestone" do
-		context "person age is less than 75" do
-			let(:person) {Person.new(age: 75)}
-
-			it "is true" do
-				expect (person.age == 75).to be_falsey
+			it "age over 99 and female" do
+				# expect(person.age ).to be > 99
+				expect( old_lady.female? ).to be_truthy
 			end	
+		end
+	end	
+
+	describe "greeting for Ernest" do
+		context "Ernest message" do
+			let(name) { Person.new( name: "Ernest")}
+
+			it "Ernest knew it was you" do
+				expect( name.Ernest ).to be_truthy
+			end
 		end	
 	end	
-end	
+
+end
 
 
 
