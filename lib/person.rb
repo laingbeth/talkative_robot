@@ -1,4 +1,7 @@
 class Person
+
+	attr_accessor :age
+
 	def initialize(args)
 		@gender = args[:gender]
 		@age    = args[:age]
@@ -9,32 +12,42 @@ class Person
 		@gender == "M"
 	end	
 
-	def age?
-		milestone = 75
-		age == 75
+	def female?
+		@gender == "F"
 	end	
 
-def age?
-		milestone = 75
-		age == 32
+	def old?
+		age = 75
 	end	
+
+	def young?
+		age = 75
+	end	
+
+	def grandmother?
+		old and @gender = "F"
+	end
+
+
+	grocery_list = [ ]
+	grocery_list = ['milk', 'eggs', 'bread', 'pizza', 'cheese', 'coffee', 'almonds', 'beans', 'chips']
+		grocery_list.to_enum.with_index(1).each do |index, item| 
+		puts "#{- item} -- #{index}"
+	end
+
+	grocery_item = grocery_list.sample
+	puts "Hey #{user[:name]}, did you already grab the #{grocery_item}?"
+	get_item = gets.chomp.capitalize
+		if get_item == "Y" 
+			grocery_list.delete(grocery_item)
+		else get_item == "N"
+			puts "remember the #{grocery_item}"
+		end
+	end
+
+puts [grocery_list]
+puts "Oh yeah, don't forget the bread!"
+grocery_list.push(bread)
 
 
 end
-
-
-		# if age 	+ user[:age]
-		# 	age_delta = (milestone - age).abs
-		# if age > milestone
-		# 	"You turned #{milestone} #{age_delta} years ago!"
-		# elsif age < milestone
-		# 	 "You'll turn #{milestone} in just #{age_delta} years!"		
-		# else 
-		# 	 "Wow, you're #{milestone}!"
-		# end
-		
-# def age_based_message(user)
-# 			if @age == 75 then
-# 			"Wow, you're 75!"
-# 			end	
-# end
