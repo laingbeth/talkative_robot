@@ -3,43 +3,51 @@ require './person'
 require './user'
 require './author'
 require './top_author'
+require './grocery_list'
 
 
-  
-	#user = User
-	#puts "Hello1 #{user}"
-	user = User.new(name: "Beth", age: 25, city: "Atlanta", gender: "F")
+	user = User.new(name: "Lisa", age: 25, city: "Atlanta", gender: "F")
 	user.hello_user
 
+user.grandmother
 
 user.gender_greet 
 
-author_hash = {name: "Fred", age: 25, city: "Hillsdale", gender: "M", books: "Over the Mountain", best_book: "Under the Hill"}
+current_user = User.new(name: "Beth", age: 35, city: "Portland", gender: "F")
+
+author_hash = {name: "Fred", age: 25, city: "Hillsdale", gender: "M", books: " 'The Mountain and the Chasm ' ", best_book: " 'My Story' "}
 	author = Top_Author.new(author_hash)
+	author.welcome
 	author.top_seller
-	
 
 people =[user, author]
 
+grocery_data = {
+	owner: "Bill", 
+	items: ["apples", "bananas", "cheese", "eggs", "bread", "milk"]
+}
+grocery_list = GroceryList.new(grocery_data)
+
+puts grocery_list
+
+ user = User.new({ name: "Joe", age: 42, gender: "M" })
+  #grocery_list = GroceryList.new(“grocery_list.txt”, user)
+  grocery_list.owner.name 
+
 #puts "Tell me about all the #{people}"
 
-#user = User.new(name: "Joe")
-#puts "Hello3 #{user}"
-
-#puts "Hello #{@name}, how's it going?"
-
-# 	def age_based_message(user)
-# 		milestone = 75
-# 		if age 	+ user[:age]
-# 			age_delta = (milestone - age).abs
-# 		if age > milestone
-# 			puts "You turned #{milestone} #{age_delta} years ago!"
-# 		elsif age < milestone
-# 			puts "You'll turn #{milestone} in just #{age_delta} years!"		
-# 		else 
-# 			puts "Wow, you're #{milestone}!"
-# 		end
-# 	end				
+	def age_based_message(user)
+		milestone = 75
+		if age 	+ user[:age]
+			age_delta = (milestone - age).abs
+		if age > milestone
+			puts "You turned #{milestone} #{age_delta} years ago!"
+		elsif age < milestone
+			puts "You'll turn #{milestone} in just #{age_delta} years!"		
+		else 
+			puts "Wow, you're #{milestone}!"
+		end
+	end				
 
 # grandparent = user_gender == "M" && user_age > 75 ? "grandfather" : "grandmother"
 
@@ -128,5 +136,5 @@ people =[user, author]
 # 		else 
 # 			puts "Sorry, you're not Ernest."
 # 		end
-# 	end
+end
 # 	

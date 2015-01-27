@@ -1,0 +1,14 @@
+in spec file
+-- expect will return a value that can be compared
+
+describe '#deposit' do
+	it "adds an amount to the balance" do
+	expect( account.deposit(1.23).balance ).to eq(101.23)
+
+	each test is isolated from each other test -- will recreate suject for each test (always start with initial balance amount in checking account, for example) 
+
+	test coverage - definition of what pecentage of your code was run through test; doesn't necessarily mean good testing, just that it was run
+
+	value of test -- need to test corner cases/exceptions - ways to "break" code; not just how works 'normally'
+
+	
