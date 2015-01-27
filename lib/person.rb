@@ -1,53 +1,46 @@
 class Person
-
-	attr_accessor :age
+	attr_accessor :age, :name, :city, :gender
 
 	def initialize(args)
-		@gender = args[:gender]
-		@age    = args[:age]
-		@name   = args[:name]
+		@name   	= args[:name]
+		@city   	= args[:city]
+		@age   		= args[:age]
+		@gender   = args[:gender]
 	end
 
-	def male?
-		@gender == "M"
-	end	
-
 	def female?
-		@gender == "F"
-	end	
+		gender == "F"
+	end
 
 	def old?
-		age = 75
+		age >= 75
 	end	
 
 	def young?
-		age = 75
-	end	
+		age <= 8
+	end
+
+	def local?
+		city = "Atlanta"
+	end
+
+	def grandfather?
+		age >= 70 && gender == "M"
+	end
 
 	def grandmother?
-		old and @gender = "F"
+		age >= 70 && gender == "F"
 	end
 
+	def great_granny?
 
-	grocery_list = [ ]
-	grocery_list = ['milk', 'eggs', 'bread', 'pizza', 'cheese', 'coffee', 'almonds', 'beans', 'chips']
-		grocery_list.to_enum.with_index(1).each do |index, item| 
-		puts "#{- item} -- #{index}"
+
+	def olive_green?
 	end
-
-	grocery_item = grocery_list.sample
-	puts "Hey #{user[:name]}, did you already grab the #{grocery_item}?"
-	get_item = gets.chomp.capitalize
-		if get_item == "Y" 
-			grocery_list.delete(grocery_item)
-		else get_item == "N"
-			puts "remember the #{grocery_item}"
-		end
+		
 	end
-
-puts [grocery_list]
-puts "Oh yeah, don't forget the bread!"
-grocery_list.push(bread)
+	
 
 
 end
+
