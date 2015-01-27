@@ -3,19 +3,14 @@ class User  < Person
 
 	def initialize(args)
 		super
-		@name = args[:name]
-		#puts "initized here"
-		# @age  = args[:age]
-		# @city = args[:city]
-		# @gender = args[:gender]
-    #[:fav_robot]		  = get_fav_robot
+		#@name = args[:name]
 	end
 
   def hello
   	puts "Hi #{name}"
   end
 
-def gender_greet
+	def gender_greet
 		if @gender == "M" 
 			puts "Hi there, Champ" 
 		elsif @gender == "F"
@@ -25,22 +20,26 @@ def gender_greet
 		end	
 	end
 
-# 	def olive_fav
-# 		puts "What is your favorite kind of olive, green or black?"
-# 		gets.chomp
-# 	end
-
-# user[:fav_robot] = get_fav_robot
-# user[:olive_fav] = get_olive_fav
-# olive = olive_fav
-
-# puts "I like black olives too" 				unless olive == "green" 
-# puts "Ug, green olives are gross!" 				if olive == "green" 
-# #puts "Yeah, olives are gross"				if olive == "neither"
-
 
 	def hello_user
-		puts "Hi #{@name}, hope you're having a great day."
+		puts "Hi #{@name} from #{@city}, hope you're having a great day."
 		#puts "Oh, I mean, #{@gender_greet}!"
 	end	
+
+	def grandmother
+		if @age >= 75 && @gender == "F"
+		puts "Wow, you're a Granny"
+		end
+	end
+
+	def olive_fav
+		puts "What is your favorite kind of olive, green or black?"
+		gets.chomp
+	end
+
+user[:olive_fav] = get_olive_fav
+olive = olive_fav
+
+puts "I like black olives too" 				unless olive == "green" 
+puts "Ug, green olives are gross!" 				if olive == "green" 
 end

@@ -7,14 +7,6 @@ class GroceryList
     @owner        = args[:owner]
   end
 
-  def owner
-    @owner
-  end
-
-  def owner=(new_owner)
-    @owner = new_owner
-  end
-
   def to_s
   	"This is #{@owner}'s Grocery List:\n" +
     "Items in grocery_list: #{@items}"

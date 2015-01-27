@@ -13,18 +13,17 @@ describe Person do
    
       it "is true" do
         expect( chick.female? ).to be_truthy
-      end
     end
+  end
 
-describe "#male?" do
+	describe "#male?" do
     context "is a dude" do
       let(:dude) { Person.new(gender: "M") }
    
       it "is true" do
         expect( dude.male? ).to be_truthy
-      end
-    end
-
+     end
+   end
 
 	describe "#old?" do
 		context "age over 75 old" do
@@ -32,26 +31,25 @@ describe "#male?" do
 
 			it "is 85 old" do
 				expect( person.old? ).to be_truthy
-			end	
-		end
+		end	
+	end
 
-		context "is 75" do
-		context "age is 75 old" do
-			let(:milestone) { Person.new(age: 75) }
+	# context "age is 75 old" do
+	# 	let(:milestone) { Person.new(age: 75) }
 
-			it "is 75 old" do
-				expect( person.milestone? ).to be_truthy
-			end	
-		end
+	# 		it "is 75 old" do
+	# 			expect( person.milestone? ).to be_truthy
+	# 		end	
+	# end
 
-		context "under 75" do
-		context "age under 75 old" do
-			let(:young_person) { Person.new(age: 10) }
+		# context "under 75" do
+		# context "age under 75 old" do
+		# 	let(:young_person) { Person.new(age: 10) }
 
-			it "is 10 old" do
-				expect( person.old? ).to be_truthy
-			end	
-		end		
+		# 	it "is 10 old" do
+		# 		expect( person.old? ).to be_truthy
+		# 	end	
+		# end		
 
 	describe "#young?" do
 		context "age under 11 old" do
@@ -84,9 +82,10 @@ describe "#male?" do
 		end	
 	end	
 	
-grandparent = user_gender == "M" && user_age > 75 ? "grandfather" : "grandmother"
+	#grandparent = user_gender == "M" && user_age > 75 ? "grandfather" : "grandmother"
 
 end
+
 
 
 

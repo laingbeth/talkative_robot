@@ -4,6 +4,7 @@ class User  < Person
 
 	def initialize(args)
 		super
+		@age = 42
 		puts "Hello from the user class"
 	end
 
@@ -45,6 +46,6 @@ class User  < Person
 # 		end
 # 	end				
 
-grandparent = user_gender == "M" && user_age > 75 ? "grandfather" : "grandmother"
+	#grandparent = user_gender == "M" && user_age > 75 ? "grandfather" : "grandmother"
 
 end
