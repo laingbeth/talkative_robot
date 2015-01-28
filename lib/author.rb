@@ -1,3 +1,4 @@
+require_relative './person'
 class Author < Person
 
 	attr_accessor :age, :name

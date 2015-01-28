@@ -1,10 +1,9 @@
+require_relative './person'
 
-class User  < Person
- attr_reader :name
+class User < Person
 
 	def initialize(args)
 		super
-		@age = 42
 		puts "Hello from the user class"
 	end
 

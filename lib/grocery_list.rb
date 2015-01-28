@@ -3,7 +3,7 @@ class GroceryList
 
   def initialize(args)
     @items = args[:items]
-    puts "Do you see me here in grocery_list?"
+    #puts "Do you see me here in grocery_list?"
     @owner        = args[:owner]
   end
 
@@ -11,6 +11,8 @@ class GroceryList
   	"This is #{@owner}'s Grocery List:\n" +
     "Items in grocery_list: #{@items}"
   end
+
+
 
 
   # def grocery_list=(new_grocery_list)
