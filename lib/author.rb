@@ -14,7 +14,7 @@ class Author < Person
 	end
 
 	def top_seller
-		puts "The top seller is #{@best_book}."
+		puts "Today's top selling book from #{@name} is #{@best_book}."
 	end
 
 end

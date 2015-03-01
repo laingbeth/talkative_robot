@@ -2,7 +2,6 @@ require 'spec_helper'
 require_relative '../lib/person'
 
 describe Person do
-
   describe "#female?" do
     context "is a chick" do
       let(:chick) { Person.new(gender: "F") }
@@ -15,7 +14,6 @@ describe Person do
 	describe "#male?" do
     context "is a dude" do
       let(:dude) { Person.new(gender: "M") }
-   
       it "is true" do
         expect( dude.male? ).to be_truthy
      end
@@ -24,7 +22,6 @@ describe Person do
 	describe "#old?" do
 		context "age over 75 old" do
 			let(:old_person) { Person.new(age: 85) }
-
 			it "is 85 old" do
 				expect( person.old? ).to be_truthy
 		end	
@@ -33,9 +30,6 @@ describe Person do
 	grandparent = user_gender == "M" && user_age > 75 ? "grandfather" : "grandmother"
 
 end
-
-
-
 
 
 # describe "is person 75 years old" do

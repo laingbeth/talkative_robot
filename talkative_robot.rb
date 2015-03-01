@@ -3,32 +3,34 @@ require './lib/user'
 require './lib/author'
 require './lib/grocery_list'
 
-user = User.new(name: "Lisa", age: 25, city: "Atlanta", gender: "F")
-user.hello_user
+user = User.new(name: 'Lisa', age: 25, city: 'Atlanta', gender: 'F')
+#user[:name] = @name
 
-user.grandmother
+user.granny
 
-user.gender_greet 
+# user.greet_gender
 
-current_user = User.new(name: "Beth", age: 35, city: "Portland", gender: "F")
+# user.hello_user
 
-author_hash = {name: "Fred", age: 25, city: "Hillsdale", gender: "M", books: " 'The Mountain and the Chasm ' ", best_book: " 'My Story' "}
-	author = Author.new(author_hash)
-	author.welcome
-	author.top_seller
+# user.age_based_message
 
-people =[user, author]
+current_user = User.new(name: 'Beth', age: 35, city: 'Portland', gender: 'F')
 
-grocery_data = {
-	owner: "Bill", 
-	items: ["apples", "bananas", "cheese", "eggs", "bread", "milk"]
-								}
+# author_hash = { name: 'Fred', age: 25, city: 'Hillsdale', gender: 'M', books: 'The Mountain and the Chasm', best_book: 'My Story' }
+# author = Author.new(author_hash)
+# author.welcome
+# author.top_seller
 
-grocery_list = GroceryList.new(grocery_data)
-puts grocery_list
+# people = [user, author]
 
-user = User.new({ name: "Joe", age: 42, gender: "M" })
+# grocery_data = {
+#   owner: 'Bill',
+#   items: %w(apples bananas cheese eggs bread milk)
+# }
+
+# grocery_list = GroceryList.new(grocery_data)
+# puts grocery_list
+
+user = User.new(name: 'Joe', age: 42, gender: 'M')
 
 
-
-puts "Tell me about all the #{people}"
