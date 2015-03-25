@@ -8,15 +8,5 @@ class Person
 		@gender   = args[:gender]
 	end
 
-	def female?
-		gender == "F"
-	end
-
-	def old?
-		age >= 75
-	end	
-
-	def young?
-		age <= 8
-	end
+	
 end		

@@ -2,12 +2,23 @@ require_relative './person'
 class User < Person
 
 	def initialize(args)
-		super
-		#puts "Hello from the user class"
+		super(args)
 	end
 
   def hello
   	puts "Hi #{name}"
+  end
+
+  def female?
+    gender == "F"
+  end
+
+  def old?
+    age >= 75
+  end 
+
+  def young?
+    age <= 8
   end
 
 	def greet_gender
@@ -25,9 +36,13 @@ class User < Person
 		puts "Oh, I mean, hi there #{@name}, from #{@city}, hope you're having a great day."
 	end	
 
-	def granny
-		if @age > 75 && @gender == "F"
-		puts "Wow, you're a Granny"
+	def grand
+		if age > 75 && @gender == "F"
+			puts "Wow, you're a Granny"
+		elsif age < 75 
+			puts "Just a youngster!"	
+		else
+			puts "Hi there Gramps"
 		end
 	end
 

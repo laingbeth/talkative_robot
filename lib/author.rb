@@ -1,7 +1,7 @@
 require_relative './person'
 class Author < Person
 
-	attr_accessor :age, :name
+	attr_accessor  :name
 
 	def initialize(args)
 			super
